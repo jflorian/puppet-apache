@@ -26,6 +26,9 @@ apache::mod_info::allow_from_ip:
     - '::1'
 apache::mod_info::location: '/server-info'
 
+apache::mod_ldap::packages:
+    - mod_ldap
+
 
 apache::mod_passenger::packages:
     - mod_passenger

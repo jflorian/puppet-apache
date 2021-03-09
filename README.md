@@ -42,6 +42,7 @@ This module lets you manage the Apache httpd web server.
 * [apache](#apache-class)
 * [apache::mod\_auth\_gssapi](#apachemod_auth_gssapi-class)
 * [apache::mod\_info](#apachemod_info-class)
+* [apache::mod\_ldap](#apachemod_ldap-class)
 * [apache::mod\_passenger](#apachemod_passenger-class)
 * [apache::mod\_ssl](#apachemod_ssl-class)
 * [apache::mod\_status](#apachemod_status-class)
@@ -118,6 +119,15 @@ An array of hostnames which to be allowed access to the server info page.  Defau
 
 ##### `allow_from_ip`
 An array of IPs or IP ranges in CIDR format to be allowed access to the server info page.  Defaults to `['127.0.0.1', '::1']`.
+
+
+#### apache::mod\_ldap class
+
+This class configures the Apache web server to support user authentication via LDAP.  See https://httpd.apache.org/docs/2.4/mod/mod_ldap.html
+for more details.
+
+##### `packages`
+An array of package names which provide support for LDAP authentication.  The default value is `mod_ldap` which is available on RedHat based platforms.
 
 
 #### apache::mod\_passenger class
